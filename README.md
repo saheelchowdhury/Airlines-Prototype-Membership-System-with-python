@@ -6,7 +6,7 @@
 print("Welcome to the Python Airlines Prototype Membership System")
 print()
 ```
-# Input prompts**
+# Input prompts
 ```
 first_name      = input("What is your first name?")
 annual_miles    = input("How many miles have you flown this year?")
@@ -22,7 +22,7 @@ if lounge_response.strip().lower() in ["yes", "y"]:
 else:
         lounge_check = False
 ```
-# Creating the prompt for ticket prices** 
+# Creating the prompt for ticket prices
 ```
 ticket_price = input("How much will a Coach Class ticket for your next flight cost (USD)?")
 
