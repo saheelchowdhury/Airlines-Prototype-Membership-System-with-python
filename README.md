@@ -78,7 +78,7 @@ elif "Emerald" in (annual_tier, lifetime_tier):
 elif "Sapphire" in (annual_tier, lifetime_tier):
     highest_tier = "Sapphire"
 ```
-# Coding the rewards base membership tier rubric
+# Coding the reward based membership tier rubric
 
 <img width="600" alt="Screenshot 2024-01-30 at 2 50 25 AM" src="https://github.com/saheelchowdhury/Airlines-Prototype-Membership-System-with-python/assets/153671296/5770244a-0581-49a7-b293-3d3971ea8185">
 
@@ -112,9 +112,13 @@ elif highest_tier == "Sapphire":
 print(f"{first_name}, this year, you have flown {annual_segments:,} flights for {annual_miles:,} miles and spent {annual_dollars:,} USD with Python Airlines. Lifetime, you have flown {lifetime_miles:,} miles.")
 ```
 
+# To display message when passenger is neither an annual member nor a lifetime one
+```
 if "None" in (annual_tier,lifetime_tier):
     print(f"You are on your way to achieving annual frequent-flier status with Python Airlines!")
-
+```
+# Message to show in 3 cases : The passenger is part of a lifetime tier, just a part of annual tier and both 
+```
 if "Diamond" in (lifetime_tier):
     print (f"You have achieved lifetime frequent-flier status at the Diamond level!")
 elif "Ruby" in (lifetime_tier):
@@ -134,7 +138,9 @@ elif "Sapphire" in (lifetime_tier and annual_tier):
     print (f"This year, you have also achieved annual frequent-flier status at the Sapphire level!")
 
 print()
-
+```
+# Deciding what reward type to mention based on their highest tier 
+```
 if highest_tier != "None":
     print("You have unlocked the following rewards:")
     if number_of_free_bags > 0:
@@ -151,3 +157,5 @@ if highest_tier != "None":
         print(f"- Your upcoming flight ticket price of ${ticket_price:.2f} USD was reduced by {percent_discount_on_ticket_prices}% to ${discounted_price:.2f} USD.")
 
 print()
+```
+# END 
