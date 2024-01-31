@@ -119,25 +119,19 @@ if "None" in (annual_tier,lifetime_tier):
 ```
 # Message to show in 3 cases : The passenger is part of a lifetime tier, just a part of annual tier and both 
 ```
-if "Diamond" in (lifetime_tier):
-    print (f"You have achieved lifetime frequent-flier status at the Diamond level!")
-elif "Ruby" in (lifetime_tier):
-    print (f"You have achieved lifetime frequent-flier status at the Ruby level!")
-elif "Emerald" in (lifetime_tier):
-    print (f"You have achieved lifetime frequent-flier status at the Emerald level!")
-elif "None" == lifetime_tier and "None" != annual_tier:
+if lifetime_tier == "None" and annual_tier == "None":
+    print(f"You are on your way to achieving annual frequent-flier status with Python Airlines!")
+
+# Check if the user has a lifetime tier 
+if lifetime_tier != "None":
+    print(f"You have achieved lifetime frequent-flier status at the {lifetime_tier} level!")
+    # If the user also has an annual tier higher than lifetime or different, display additional message
+    if annual_tier != "None" and annual_tier != lifetime_tier:
+        print(f"This year, you have also achieved annual frequent-flier status at the {annual_tier} level!")
+elif annual_tier != "None":
     print(f"This year, you have achieved annual frequent-flier status at the {annual_tier} level!")
-
-if "Diamond" in (lifetime_tier and annual_tier):
-     print (f"This year, you have also achieved annual frequent-flier status at the Diamond level!")
-elif "Ruby" in (lifetime_tier and annual_tier):
-    print (f"This year, you have also achieved annual frequent-flier status at the Ruby level!")
-elif "Emerald" in (lifetime_tier and annual_tier):
-    print (f"This year, you have also achieved annual frequent-flier status at the Emerald level!")
-elif "Sapphire" in (lifetime_tier and annual_tier):
-    print (f"This year, you have also achieved annual frequent-flier status at the Sapphire level!")
-
-print()
+    
+print()  # Print a blank line
 ```
 # Deciding what reward type to mention based on their highest tier 
 ```
